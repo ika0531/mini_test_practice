@@ -25,6 +25,11 @@ module MiniTestPractice
       str += "Buzz" if n % 5 == 0
       return str
     end
+
+    def hello()
+      print "hello"
+    end
+
   end
 
 end

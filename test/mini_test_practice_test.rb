@@ -28,7 +28,7 @@ class MiniTestPracticeTest < Minitest::Test
     assert @mini.divide(22, 5) == 4, "divide failed(22, 5, 4)"
     assert @mini.divide(14, 2) == 7, "divide failed(14, 2, 7)"
     assert @mini.divide(20, 40) == 0, "divide failed(20, 40, 0)"
-    assert_raises(ZeroDivisionError){@mini.divide(1, 0)}
+    assert_raises(ZeroDivisionError) {@mini.divide(1, 0)}
   end
 
   def test_fizz_buzz
@@ -36,6 +36,10 @@ class MiniTestPracticeTest < Minitest::Test
     assert @mini.fizz_buzz(3) == "Fizz", "fizz_buzz_failed(3)"
     assert @mini.fizz_buzz(5) == "Buzz", "fizz_buzz_failed(5)"
     assert @mini.fizz_buzz(15) == "FizzBuzz", "fizz_buzz_failed(15)"
+  end
+
+  def test_hello
+    assert capture_io {@mini.hello}[0] == "hello", "hello failed"
   end
 
 #  def test_that_it_has_a_version_number
